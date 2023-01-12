@@ -12,7 +12,8 @@ el conjunto de enteros recibido como argumento.
 RECURSOS CONSULTADOS:
   
   🎥 VÍDEOS
-1. https://www.youtube.com/watch?v=7KW59UO55TQ
+1. https://www.youtube.com/watch?v=WxoGvBzWuGs
+2. https://www.youtube.com/watch?v=7KW59UO55TQ
 
   📒 PÁGINAS WEB 
 1. https://platzi.com/tutoriales/1450-programacion-estructurada/6778-c-resumido-y-stack-desarrollado-en-c/
