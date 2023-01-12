@@ -16,7 +16,7 @@ RECURSOS CONSULTADOS:
 2. https://www.youtube.com/watch?v=7KW59UO55TQ
 
   📒 PÁGINAS WEB 
-1. https://platzi.com/tutoriales/1450-programacion-estructurada/6778-c-resumido-y-stack-desarrollado-en-c/
+1. https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e
 
   💻 REPOSITORIOS
 1. https://github.com/gemartin99/Push_swap
