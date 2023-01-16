@@ -17,6 +17,7 @@ RECURSOS CONSULTADOS:
 
   📒 PÁGINAS WEB 
 1. https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e
+2. https://www.monografias.com/trabajos90/listas-c/listas-c
 
   💻 REPOSITORIOS
 1. https://github.com/gemartin99/Push_swap
