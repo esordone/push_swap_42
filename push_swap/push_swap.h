@@ -6,7 +6,7 @@
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:42:07 by esordone          #+#    #+#             */
-/*   Updated: 2023/01/16 16:33:15 by esordone         ###   ########.fr       */
+/*   Updated: 2023/01/16 18:10:04 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,26 @@ typedef struct s_nodo
 	int				*content;
 	struct s_nodo	*next;
 }					t_stack;
+
+typedef struct s_dades
+{
+	//el llibre
+	int *argc;
+	char **argv;
+
+	//els capitols
+	t_stack *A;
+	t_stack *B;
+
+} 			t_dades;
+
+typedef struct s_experiment
+{
+	int 	*argc;
+	char 	**argv;
+
+	char 	*c;
+}			t_element;
 
 t_stack	*new_lst(int content);
 

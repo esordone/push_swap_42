@@ -6,7 +6,7 @@
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:37:13 by esordone          #+#    #+#             */
-/*   Updated: 2023/01/16 16:20:14 by esordone         ###   ########.fr       */
+/*   Updated: 2023/01/16 18:05:04 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,10 @@ int main (int argc, char **argv)
 {
 	int i;
 	int n;
-	t_stack	*stackA;
+	//t_stack	*stackA;
 	//t_list	*stackB;
+
+	t_dades 	meuLLibre;
 
 	i = 0;
 	if (argc < 2)
@@ -51,16 +53,18 @@ int main (int argc, char **argv)
 	}
 	//com argv[0] es a.out, al posar ++i ja comenca en argv[1],
 	//i va passant fins que aplegue a l'ultim argument
+	stackA = new_lst(ft_atoi(argv[i]));
 	while (argv[++i])
 	{
 		n = 0;
 		if (valid_input(argc, argv))
 		{
-			stackA = new_lst(ft_atoi(argv[i]));
+			printf("alguna cosa aplega aci %i\n", ft_atoi(argv[i]));
 			// argc -1 perque el primer es a.out
 			while (n < (argc - 1))
 			{
-				stackA -> next = new_lst(ft_atoi(argv[++i]));
+				newelemnt = new_lst(argv[i]);
+				ft_lstadd_back(&stackA, newelement);
 				n++;
 			}
 		}
