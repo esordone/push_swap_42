@@ -21,3 +21,4 @@ RECURSOS CONSULTADOS:
 
   💻 REPOSITORIOS
 1. https://github.com/gemartin99/Push_swap
+2. https://gist.github.com/Alejandrocaro35/28bbec98f352db5df240ec146d59778d
