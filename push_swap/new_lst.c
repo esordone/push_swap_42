@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   new_lst.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/12 15:42:07 by esordone          #+#    #+#             */
-/*   Updated: 2023/01/16 16:33:15 by esordone         ###   ########.fr       */
+/*   Created: 2023/01/16 14:39:10 by esordone          #+#    #+#             */
+/*   Updated: 2023/01/16 16:48:23 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-#include "./libft/libft.h"
+#include "push_swap.h"
 
-typedef struct s_nodo
+t_stack	*new_lst(int content)
 {
-	int				*content;
-	struct s_nodo	*next;
-}					t_stack;
+	t_stack	*n;
 
-t_stack	*new_lst(int content);
-
-#endif
+	n = (t_stack *)malloc(sizeof(t_stack));
+	if (!n)
+		return (NULL);
+	n->content = &content;
+	n->next = NULL;
+	return (n);
+}
