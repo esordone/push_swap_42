@@ -22,7 +22,7 @@ int main (int argc, char **agrv)
 		return (0);
 		write (1, "\n", 1);
 	}
-	//com argv[0] es a.out, al posar ++i ja comenca en argv[1],
+	//com argv[0] es a.out, al posar ++i ja comença en argv[1],
 	//i va passant fins que aplegue a l'ultim argument
 	while (argv[++i])
 	{
