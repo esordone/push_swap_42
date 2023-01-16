@@ -6,11 +6,12 @@
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 12:49:13 by esordone          #+#    #+#             */
-/*   Updated: 2022/10/12 12:55:31 by esordone         ###   ########.fr       */
+/*   Updated: 2023/01/16 14:37:23 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 
 t_list	*ft_lstnew(void *content)
 {

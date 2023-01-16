@@ -6,7 +6,7 @@
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:41:50 by esordone          #+#    #+#             */
-/*   Updated: 2022/10/18 13:04:24 by esordone         ###   ########.fr       */
+/*   Updated: 2023/01/16 14:46:05 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,10 @@ char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
 typedef struct s_list
 {
-	void			*content;
+	int			*content;
 	struct s_list	*next;
 }					t_list;
+t_list	*new_lst(int content);
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);

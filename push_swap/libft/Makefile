@@ -6,7 +6,7 @@
 #    By: esordone <esordone@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/19 10:49:45 by esordone          #+#    #+#              #
-#    Updated: 2022/10/18 12:48:30 by esordone         ###   ########.fr        #
+#    Updated: 2023/01/16 14:46:07 by esordone         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c\
 	  ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c\
 	  ft_atoi.c ft_calloc.c ft_strdup.c ft_striteri.c \
 	  ft_strmapi.c ft_substr.c ft_putchar_fd.c ft_putstr_fd.c \
-	  ft_putendl_fd.c ft_putnbr_fd.c ft_strjoin.c ft_itoa.c \
+	  ft_putendl_fd.c ft_putnbr_fd.c ft_strjoin.c ft_itoa.c new_lst.c\
 	  ft_strtrim.c ft_split.c
 
 SRCSBONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
