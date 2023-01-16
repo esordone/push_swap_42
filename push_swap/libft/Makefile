@@ -6,7 +6,7 @@
 #    By: esordone <esordone@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/19 10:49:45 by esordone          #+#    #+#              #
-#    Updated: 2023/01/16 16:37:23 by esordone         ###   ########.fr        #
+#    Updated: 2023/01/16 16:25:54 by esordone         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,7 @@ clean:
 fclean: clean 
 	@$(RM) $(NAME) 
 	@$(RMB)
-	@echo "$(GRAY)Executable files libft cleaned!$(DEF_COLOR)"
+	@echo "$(GRAY)Executable files cleaned!$(DEF_COLOR)"
 
 re: fclean all
 	 @echo "$(GRAY)Everything have been remake!$(DEF_COLOR)"

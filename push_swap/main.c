@@ -6,7 +6,7 @@
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:37:13 by esordone          #+#    #+#             */
-/*   Updated: 2023/01/16 16:52:01 by esordone         ###   ########.fr       */
+/*   Updated: 2023/01/16 16:20:14 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ int main (int argc, char **argv)
 		if (valid_input(argc, argv))
 		{
 			stackA = new_lst(ft_atoi(argv[i]));
-			printf("alguna cosa aplega aci %s\n", argv[i]);
 			// argc -1 perque el primer es a.out
 			while (n < (argc - 1))
 			{
