@@ -6,7 +6,7 @@
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:42:07 by esordone          #+#    #+#             */
-/*   Updated: 2023/01/16 18:10:04 by esordone         ###   ########.fr       */
+/*   Updated: 2023/01/16 18:55:47 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ typedef struct s_dades
 	char **argv;
 
 	//els capitols
-	t_stack *A;
-	t_stack *B;
+	t_stack *a;
+	t_stack *b;
 
 } 			t_dades;
 
@@ -41,7 +41,7 @@ typedef struct s_experiment
 	int 	*argc;
 	char 	**argv;
 
-	char 	*c;
+	int		i;
 }			t_element;
 
 t_stack	*new_lst(int content);
