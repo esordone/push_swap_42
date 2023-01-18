@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   new_lst.c                                          :+:      :+:    :+:   */
+/*   add_lst_back.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 10:32:49 by esordone          #+#    #+#             */
-/*   Updated: 2023/01/18 12:02:47 by esordone         ###   ########.fr       */
+/*   Created: 2023/01/18 10:41:34 by esordone          #+#    #+#             */
+/*   Updated: 2023/01/18 12:01:02 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*new_lst(int content)
+void	add_lst_back(t_stack **lst, t_stack *new)
 {
-	t_stack	*n;
+	t_stack	*aux;
 
-	n = (t_stack *)malloc(sizeof(t_stack));
-	if (!n)
-		return (NULL);
-	n->content = &content;
-	n->next = NULL;
-	return (n);
+	aux = *lst;
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	if (new)
+	{
+		aux = last_lst(*lst);
+		aux->next = new;
+	}
 }

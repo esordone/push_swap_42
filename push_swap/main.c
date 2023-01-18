@@ -6,7 +6,7 @@
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:37:13 by esordone          #+#    #+#             */
-/*   Updated: 2023/01/16 18:05:04 by esordone         ###   ########.fr       */
+/*   Updated: 2023/01/18 12:00:09 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,10 @@ int	valid_input(int argc, char **argv)
 
 int main (int argc, char **argv)
 {
-	int i;
-	int n;
-	//t_stack	*stackA;
-	//t_list	*stackB;
-
-	t_dades 	meuLLibre;
+	t_stack		*a;
+	int			i;
+	int			n;
+	t_stack		*new_element;
 
 	i = 0;
 	if (argc < 2)
@@ -53,18 +51,17 @@ int main (int argc, char **argv)
 	}
 	//com argv[0] es a.out, al posar ++i ja comenca en argv[1],
 	//i va passant fins que aplegue a l'ultim argument
-	stackA = new_lst(ft_atoi(argv[i]));
+	a = new_lst(ft_atoi(argv[i]));
 	while (argv[++i])
 	{
 		n = 0;
 		if (valid_input(argc, argv))
 		{
-			printf("alguna cosa aplega aci %i\n", ft_atoi(argv[i]));
 			// argc -1 perque el primer es a.out
 			while (n < (argc - 1))
 			{
-				newelemnt = new_lst(argv[i]);
-				ft_lstadd_back(&stackA, newelement);
+				new_element = new_lst(ft_atoi(argv[i]));
+				add_lst_back(&a, new_element);
 				n++;
 			}
 		}
