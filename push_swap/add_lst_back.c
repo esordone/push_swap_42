@@ -6,15 +6,15 @@
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 10:41:34 by esordone          #+#    #+#             */
-/*   Updated: 2023/01/18 12:01:02 by esordone         ###   ########.fr       */
+/*   Updated: 2023/01/18 12:14:23 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	add_lst_back(t_stack **lst, t_stack *new)
+void	add_lst_back(t_nodo **lst, t_nodo *new)
 {
-	t_stack	*aux;
+	t_nodo	*aux;
 
 	aux = *lst;
 	if (!*lst)

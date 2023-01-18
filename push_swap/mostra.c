@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   last_lst.c                                         :+:      :+:    :+:   */
+/*   mostra.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 11:56:13 by esordone          #+#    #+#             */
-/*   Updated: 2023/01/18 12:45:00 by esordone         ###   ########.fr       */
+/*   Created: 2023/01/18 12:09:58 by esordone          #+#    #+#             */
+/*   Updated: 2023/01/18 12:21:05 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_nodo	*last_lst(t_nodo *lst)
+void	mostra(int argc, char **argv)
 {
-	if (!lst)
-		return (lst);
-	while (lst->next != NULL)
+	int	i;
+	
+	i = 0;
+	if (argc >= 2)
 	{
-		lst = lst->next;
+		while (argv[++i])
+		{
+			printf("%s\n", argv[i]);
+		}
 	}
-	return (lst);
 }

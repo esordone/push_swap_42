@@ -6,7 +6,7 @@
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:42:07 by esordone          #+#    #+#             */
-/*   Updated: 2023/01/18 12:03:26 by esordone         ###   ########.fr       */
+/*   Updated: 2023/01/18 12:45:03 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,36 +20,31 @@
 
 typedef struct s_nodo
 {
-	int				*content;
 	struct s_nodo	*next;
+	int				index;
+	int				val;
+	int 			pos;
+}					t_nodo;
+
+typedef struct s_stack
+{
+	struct s_nodo	*first;
+	struct s_nodo	*last;
+	int				len;
 }					t_stack;
 
-typedef struct s_dades
-{
-	//el llibre
-	int *argc;
-	char **argv;
-
-	//els capitols
-	t_stack *a;
-	t_stack *b;
-	int		i;
-	int		n;
-
-} 			t_dades;
-
-typedef struct s_experiment
+/*typedef struct s_experiment
 {
 	int 	*argc;
 	char 	**argv;
 
 	int		i;
-}			t_element;
+}			t_element;*/
 
-t_stack	*new_lst(int content);
-t_stack	*last_lst(t_stack *lst);
-void	add_lst_back(t_stack **lst, t_stack *new);
-
-
+t_nodo	*new_lst(int index, int valor, int posicio);
+t_nodo	*last_lst(t_nodo *lst);
+void	add_lst_back(t_nodo **lst, t_nodo *new);
+void	mostra(int argc, char **argv);
+int		ft_len(const char *s);
 
 #endif
