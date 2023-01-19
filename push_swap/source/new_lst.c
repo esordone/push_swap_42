@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   new_lst.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 18:48:16 by esordone          #+#    #+#             */
-/*   Updated: 2023/01/18 10:41:37 by esordone         ###   ########.fr       */
+/*   Created: 2023/01/18 10:32:49 by esordone          #+#    #+#             */
+/*   Updated: 2023/01/19 11:40:38 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+t_nodo	*new_lst(int index, int val, int pos)
 {
-	t_list	*aux;
+	t_nodo	*n;
 
-	aux = *lst;
-	if (!*lst)
+	n = (t_nodo *)malloc(sizeof(t_nodo));
+	if (!n)
+		return (NULL);
+	n->index = index;
+	n->val = val;
+	n-> pos = pos;
+	n->next = NULL;
+	//n->len++;
+	return (n);
+}
+
+int	ft_len(char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		*lst = new;
-		return ;
+		i++;
 	}
-	if (new)
-	{	
-		aux = ft_lstlast(*lst);
-		aux->next = new;
-	}
+	return (i);
 }

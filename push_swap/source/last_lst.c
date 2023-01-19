@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   last_lst.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 18:48:16 by esordone          #+#    #+#             */
-/*   Updated: 2023/01/18 10:41:37 by esordone         ###   ########.fr       */
+/*   Created: 2023/01/18 11:56:13 by esordone          #+#    #+#             */
+/*   Updated: 2023/01/19 11:40:28 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+t_nodo	*last_lst(t_nodo *lst)
 {
-	t_list	*aux;
-
-	aux = *lst;
-	if (!*lst)
+	if (!lst)
+		return (lst);
+	while (lst->next != NULL)
 	{
-		*lst = new;
-		return ;
+		lst = lst->next;
 	}
-	if (new)
-	{	
-		aux = ft_lstlast(*lst);
-		aux->next = new;
-	}
+	return (lst);
 }

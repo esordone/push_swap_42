@@ -6,7 +6,7 @@
 #    By: esordone <esordone@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/12 15:02:45 by esordone          #+#    #+#              #
-#    Updated: 2023/01/18 12:44:53 by esordone         ###   ########.fr        #
+#    Updated: 2023/01/19 11:46:34 by esordone         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,11 @@ WHITE = \033[0;97m
 #-----------------------------------VARIABLES----------------------------------#
 NAME = push_swap
 
-SRC = main.c add_lst_back.c new_lst.c last_lst.c
+SRC = main.c \
+	  source/add_lst_back.c \
+	  source/new_lst.c \
+	  source/last_lst.c \
+	  source/valid_input.c
 
 INCLUDE = push_swap.h
 

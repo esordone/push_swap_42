@@ -6,57 +6,42 @@
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:37:13 by esordone          #+#    #+#             */
-/*   Updated: 2023/01/18 12:44:45 by esordone         ###   ########.fr       */
+/*   Updated: 2023/01/19 11:41:41 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	valid_input(int argc, char **argv)
+/*void mostra(t_nodo *a)
 {
-	int	i;
-	int n;
-	char **str;
+	t_nodo *aux;
 
-	i = 1;
-	n = 0;
-	str = argv;
-	while (i < (argc - 1))
+	aux = a;
+	int i = 0;
+	while (aux != NULL)
 	{
-		n = 0;
-		while (n < (ft_len(argv[i])))
-		{
-			if (!((str[i][n] <= 57 && str[i][n] >= 48)
-					|| (str[i][n] == '+' || str[i][n] == '-')))
-			{
-				write (1, "Error\n", 6);
-				return (0);
-			}
-			n++;
-		}
+		printf("\nelement %d\n:", aux->val);
+		aux = aux->next;
 		i++;
 	}
-	return (1);
-}
+	if (aux == NULL)
+	printf("\n\nHas aplegat al final de la llista\n\n");
+}*/
 
 int main (int argc, char **argv)
 {
-	t_nodo		*first;
+	t_nodo		*primer;
 	int			n;
 	int			i;
 	t_nodo		*new_element;
-	t_stack		*a;
+	//t_stack		*a;
 
 	i = 1;
 	if (argc < 2)
-	{
-		write (1, "Error\n", 6);
 		return (0);
-	}
 	//com argv[0] es a.out, al posar ++i ja comenca en argv[1],
 	//i va passant fins que aplegue a l'ultim argument
 	// el 1 es el index que s'ha de fer encara
-	first = new_lst(1, ft_atoi(argv[i]), i);
+	primer = new_lst(1, ft_atoi(argv[i]), i);
 	n = 0;
 	if (valid_input(argc, argv) == 1)
 	{
@@ -65,14 +50,14 @@ int main (int argc, char **argv)
 		{
 			//el 1 es l'index que encara no esta fet
 			new_element = new_lst(1, ft_atoi(argv[i]), i);
-			add_lst_back(&first, new_element);
+			add_lst_back(&primer, new_element);
 			n++;
 		}
 	}
-	a = (t_stack *)malloc(sizeof(t_stack));
+	/*a = (t_stack *)malloc(sizeof(t_stack));
 	if (!a)
 		return (0);
-	a.first = first;
+	a.first = primer;
 
 	printf("------------------------\n");
     printf("first = %p\n", a.first);
@@ -91,7 +76,7 @@ int main (int argc, char **argv)
     }
     printf("------------------------\n");
 
-    /*printf("------------------------\nb\n");
+    printf("------------------------\nb\n");
     printf("first = %p\n", b.first);
     printf("last = %p\n", b.last);
     printf("size = %i\n", b.size);
