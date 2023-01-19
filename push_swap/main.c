@@ -26,8 +26,7 @@
 	if (aux == NULL)
 	printf("\n\nHas aplegat al final de la llista\n\n");
 }*/
-
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 {
 	t_nodo		*primer;
 	int			n;

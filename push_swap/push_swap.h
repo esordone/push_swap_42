@@ -12,19 +12,19 @@
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-#include <limits.h>
-#include "./libft/libft.h"
+# include <unistd.h>
+# include <stdlib.h>
+# include <string.h>
+# include <stdio.h>
+# include <limits.h>
+# include "./libft/libft.h"
 
 typedef struct s_nodo
 {
 	struct s_nodo	*next;
 	int				index;
 	int				val;
-	int 			pos;
+	int				pos;
 }					t_nodo;
 
 typedef struct s_stack
@@ -43,7 +43,7 @@ typedef struct s_stack
 }			t_element;*/
 
 t_nodo	*new_lst(int index, int val, int pos);
-int		max_int(int argc, char **argv,int i);
+int		max_int(int argc, char **argv, int i);
 int		not_int(int argc, char **argv, int i);
 int		valid_input(int argc, char **argv);
 t_nodo	*last_lst(t_nodo *lst);

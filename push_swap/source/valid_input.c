@@ -12,11 +12,11 @@
 
 #include "../push_swap.h"
 
-int rep_number(int argc, char **argv, int i)
+int	rep_number(int argc, char **argv, int i)
 {
 	int	p;
-	int n;
-	int r;
+	int	n;
+	int	r;
 
 	n = ft_len(argv[i]);
 	p = i + 1;
@@ -38,16 +38,18 @@ int rep_number(int argc, char **argv, int i)
 
 int	max_int(int argc, char **argv, int i)
 {
-	int n;
+	int	n;
 
-	n = ft_atoi(argv[i]);
 	while (i < argc)
 	{
+		n = ft_atoi(argv[i]);
 		if (n >= INT_MAX || n <= INT_MIN)
+			return (0);
+		if (ft_strncmp(argv[i], ft_itoa(n), ft_strlen(argv[i])) != 0)
 			return (0);
 		i++;
 	}
-	return (1);	
+	return (1);
 }
 
 int	not_int(int argc, char **argv, int i)
@@ -59,7 +61,7 @@ int	not_int(int argc, char **argv, int i)
 	{
 		while (n < (ft_len(argv[i])))
 		{
-			if (!((argv[i][n] <= 57 && argv[i][n] >= 48) 
+			if (!((argv[i][n] <= 57 && argv[i][n] >= 48)
 				|| (argv[i][n] == '+' || argv[i][n] == '-')))
 				return (0);
 			n++;
@@ -75,7 +77,7 @@ int	valid_input(int argc, char **argv)
 	i = 1;
 	while (i < argc)
 	{
-		if (not_int(argc,argv, i) == 0)
+		if (not_int(argc, argv, i) == 0)
 		{
 			write (1, "Error\n", 6);
 			return (0);
