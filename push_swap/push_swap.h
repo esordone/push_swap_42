@@ -27,13 +27,13 @@ typedef struct s_nodo
 	int				pos;
 }					t_nodo;
 
-typedef struct s_stack
+/*typedef struct s_stack
 {
 	struct s_nodo	*first;
 	struct s_nodo	*last;
 	int				len;
 }					t_stack;
-
+*/
 /*typedef struct s_experiment
 {
 	int 	*argc;
@@ -47,6 +47,7 @@ int		max_int(int argc, char **argv, int i);
 int		not_int(int argc, char **argv, int i);
 int		valid_input(int argc, char **argv);
 t_nodo	*last_lst(t_nodo *lst);
+//t_nodo  *inicialize_stack_a(int argc, char **argv);
 void    mostra(t_nodo *a);
 int		rep_number(int argc, char **argv, int i);
 void	add_lst_back(t_nodo **lst, t_nodo *new);

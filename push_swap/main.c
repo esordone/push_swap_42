@@ -14,16 +14,16 @@
 
 void mostra(t_nodo *a)
 {
-	t_nodo *aux;
-
-	aux = a;
-	while (aux)
+	while (a)
 	{
-		printf("\nelement %d\n:", aux->val);
-		aux = aux->next;
+		printf("\nelement: %d\n", a->val);
+		printf("ind = %i\n", a->index);
+        printf("pos = %i\n", a->pos);
+        printf("next = %p\n", a->next);
+		a = a->next;
 	}
-	if (aux == NULL)
-	printf("\n\nHas aplegat al final de la llista\n\n");
+	if (a == NULL)
+		printf("\n\nHas aplegat al final de la llista\n\n");
 }
 
 int main(int argc, char **argv)
@@ -31,33 +31,38 @@ int main(int argc, char **argv)
 	t_nodo		*a;
 	int			n;
 	int			i;
-	t_nodo		*new_element;
+	t_nodo		*nodo;
 	//t_stack		*a;
 
 	i = 1;
+	//a = inicialize_stack_a(argc, argv);
 	if (argc < 2)
 		return (0);
-	//com argv[0] es a.out, al posar ++i ja comenca en argv[1],
-	//i va passant fins que aplegue a l'ultim argument
-	// el 1 es el index que s'ha de fer encara
-	a = new_lst(1, ft_atoi(argv[i]), i);
-	n = 0;
-	if (valid_input(argc, argv) == 1)
+	else
 	{
-		// argc -1 perque el primer es a.out
-		while (n < (argc - 1))
+		n = 0;
+		if (valid_input(argc, argv) == 1)
 		{
-			//el 1 es l'index que encara no esta fet
-			new_element = new_lst(1, ft_atoi(argv[i]), i);
-			add_lst_back(&a, new_element);
-			n++;
-			mostra(new_element);
+			// argc -1 perque el primer es a.out
+			while (n < (argc - 1))
+			{
+				//el 1 es l'index que encara no esta fet
+				//com argv[0] es a.out, al posar ++i ja comenca en argv[1],
+				//i va passant fins que aplegue a l'ultim argument
+				if (!a)
+					a = new_lst(1, ft_atoi(argv[i]), i);
+				else
+				{
+					nodo = new_lst(1, ft_atoi(argv[i]), i);
+					add_lst_back(&a, nodo);
+					mostra(a);
+				}
+				i++;
+				n++;
+			}
 		}
 	}
-	/*a = (t_stack *)malloc(sizeof(t_stack));
-	if (!a)
-		return (0);
-	a.first = primer;
+/*
 	printf("------------------------\n");
     printf("first = %p\n", a.first);
     printf("last = %p\n", a.last);
