@@ -28,7 +28,8 @@ SRC = main.c \
 	  source/add_lst_back.c \
 	  source/new_lst.c \
 	  source/last_lst.c \
-	  source/valid_input.c
+	  source/valid_input.c \
+	  source/index.c
 
 INCLUDE = push_swap.h
 
@@ -54,7 +55,7 @@ all: makelibft $(NAME)
 makelibft :
 	@$(MAKE) -C $(LIBFT) bonus
 	@echo "$(YELLOW)Libft compiled!$(DEF_COLOR)"
-	
+
 $(NAME): $(OBJ) libft/libft.a
 	@$(CC) $(FLAGS) $(OBJ) libft/libft.a -o $(NAME)
 
