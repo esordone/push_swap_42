@@ -11,24 +11,24 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-/*void mostra(t_nodo *a)
+
+void mostra(t_nodo *a)
 {
 	t_nodo *aux;
 
 	aux = a;
-	int i = 0;
-	while (aux != NULL)
+	while (aux)
 	{
 		printf("\nelement %d\n:", aux->val);
 		aux = aux->next;
-		i++;
 	}
 	if (aux == NULL)
 	printf("\n\nHas aplegat al final de la llista\n\n");
-}*/
+}
+
 int main(int argc, char **argv)
 {
-	t_nodo		*primer;
+	t_nodo		*a;
 	int			n;
 	int			i;
 	t_nodo		*new_element;
@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 	//com argv[0] es a.out, al posar ++i ja comenca en argv[1],
 	//i va passant fins que aplegue a l'ultim argument
 	// el 1 es el index que s'ha de fer encara
-	primer = new_lst(1, ft_atoi(argv[i]), i);
+	a = new_lst(1, ft_atoi(argv[i]), i);
 	n = 0;
 	if (valid_input(argc, argv) == 1)
 	{
@@ -49,15 +49,15 @@ int main(int argc, char **argv)
 		{
 			//el 1 es l'index que encara no esta fet
 			new_element = new_lst(1, ft_atoi(argv[i]), i);
-			add_lst_back(&primer, new_element);
+			add_lst_back(&a, new_element);
 			n++;
+			mostra(new_element);
 		}
 	}
 	/*a = (t_stack *)malloc(sizeof(t_stack));
 	if (!a)
 		return (0);
 	a.first = primer;
-
 	printf("------------------------\n");
     printf("first = %p\n", a.first);
     printf("last = %p\n", a.last);
@@ -73,8 +73,8 @@ int main(int argc, char **argv)
         printf("next = %p\n\n", a.first->next);
         a.first = a.first->next;
     }
-    printf("------------------------\n");
-
+    printf("------------------------\n");*/
+/*
     printf("------------------------\nb\n");
     printf("first = %p\n", b.first);
     printf("last = %p\n", b.last);

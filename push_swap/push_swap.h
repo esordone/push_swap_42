@@ -22,17 +22,17 @@
 typedef struct s_nodo
 {
 	struct s_nodo	*next;
-	int		index;
-	int		val;
-	int		pos;
-}			t_nodo;
+	int				index;
+	int				val;
+	int				pos;
+}					t_nodo;
 
 typedef struct s_stack
 {
 	struct s_nodo	*first;
 	struct s_nodo	*last;
-	int		len;
-}			t_stack;
+	int				len;
+}					t_stack;
 
 /*typedef struct s_experiment
 {
@@ -46,10 +46,10 @@ t_nodo	*new_lst(int index, int val, int pos);
 int		max_int(int argc, char **argv, int i);
 int		not_int(int argc, char **argv, int i);
 int		valid_input(int argc, char **argv);
-t_nodo		*last_lst(t_nodo *lst);
+t_nodo	*last_lst(t_nodo *lst);
+void    mostra(t_nodo *a);
 int		rep_number(int argc, char **argv, int i);
-void		add_lst_back(t_nodo **lst, t_nodo *new);
+void	add_lst_back(t_nodo **lst, t_nodo *new);
 int		ft_len(char *s);
-//void	mostra(t_nodo *a);
 
 #endif
