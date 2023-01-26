@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-/*void mostra(t_nodo *a)
+void mostra(t_nodo *a)
 {
 	while (a)
 	{
@@ -24,7 +24,7 @@
 	}
 	if (a == NULL)
 		printf("\n\nHas aplegat al final de la llista\n\n");
-}*/
+}
 
 int main(int argc, char **argv)
 {
@@ -36,6 +36,7 @@ int main(int argc, char **argv)
 
 	i = 1;
 	//a = inicialize_stack_a(argc, argv);
+	printf("aquest es l'index %d\n", ft_index(argc, argv, i));
 	if (argc < 2)
 		return (0);
 	else
@@ -55,7 +56,7 @@ int main(int argc, char **argv)
 				{
 					nodo = new_lst(ft_index(argc, argv, i), ft_atoi(argv[i]), i);
 					add_lst_back(&a, nodo);
-					//mostra(a);
+					mostra(a);
 				}
 				i++;
 				n++;

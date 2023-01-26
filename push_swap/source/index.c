@@ -12,44 +12,63 @@
 
 #include "../push_swap.h"
 
-int ft_index(int argc, char **argv, int i)
+int	ft_index(int argc, char **argv, int i)
 {
+	t_nodo	**lista_nodos;
+	t_nodo	*valor;
 	int	num;
 	int	res;
 
-	res = 1;
+	//cree la llista
+	lista_nodos = (t_nodo *)malloc(sizeof(t_nodo **)*(argc - 1));
+	if (!lista_nodos)
+		return (0);
+	res = INT_MAX;
+	while (i < argc)
+	{
+		// cree el nodo
+		valor = malloc(sizeof (t_nodo *) * (1));
+		if (!valor)
+		{
+			free_malloc(lista_nodos, i - 1);
+			return (0);
+		}
+		valor.index = NULL;
+		//replene el nodo
+		if (i > 1)
+		{
+			//estamos en el nodo anterior
+			lista_nodos[i - 1]->next = valor;
+		}
+	}
+	i = 1;
 	while (i < argc)
 	{
 		num = ft_atoi(argv[i]);
-		printf("dades: %d\n", num);
-		if (/*ai ai ai*/ < num)
+		//printf("dades: %d\n", num);
+		//printf("\n el valor de indx inicial = %d\n", indx);
+		if (res > num)
 		{
-			printf("entra aci\n");
-			res++;
-			printf("res val = %d\n", res);
+			res = num;
+			//printf("\n el valor de indx  = %d\n", indx);*/
 		}
 		i++;
-		printf("i val = %d\n", i);
+		printf("res val = %d\n", res);
 	}
-    printf(" res = %d\n", res);
+	//printf("indx val = %d\n", indx);
+    //printf(" res = %d\n", res);
 	return (res);
 }
 
-/*int	max(int *tab, int argc)
+void	free_malloc(t_nodo **valor, int i)
 {
-	int	result;
-	int i;
+	int	j;
 
-	i = 0;
-	result = tab[0];
-
-	while (i < argc)
+	j = 0;
+	while (j < i)
 	{
-		if (result < tab[i])
-		{
-			result = tab[i];
-		}
-		i++;
+		free(valor[j]);
+		j++;
 	}
-	return (result);
-}*/
+	free(valor);
+}
