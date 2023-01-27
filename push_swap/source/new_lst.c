@@ -12,14 +12,14 @@
 
 #include "../push_swap.h"
 
-t_nodo	*new_lst(int index, int val, int pos)
+t_nodo	*new_lst(/*int index,*/ int val, int pos)
 {
 	t_nodo	*n;
 
 	n = (t_nodo *)malloc(sizeof(t_nodo));
 	if (!n)
 		return (NULL);
-	n->index = index;
+	n->index = 0;
 	n->val = val;
 	n->pos = pos;
 	n->next = NULL;

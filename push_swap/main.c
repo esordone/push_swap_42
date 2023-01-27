@@ -29,19 +29,19 @@ void mostra(t_nodo *a)
 int main(int argc, char **argv)
 {
 	t_nodo		*a;
+	t_nodo		*first;
 	int			n;
 	int			i;
 	t_nodo		*nodo;
-	//t_stack		*a;
 
 	i = 1;
 	//a = inicialize_stack_a(argc, argv);
-	printf("aquest es l'index %d\n", ft_index(argc, argv, i));
+	//printf("aquest es l'index %d\n", ft_index(argc, argv, i));
 	if (argc < 2)
 		return (0);
 	else
 	{
-		n = 0;
+		n = 0; // son los nodos
 		if (valid_input(argc, argv) == 1)
 		{
 			// argc -1 perque el primer es a.out
@@ -51,16 +51,20 @@ int main(int argc, char **argv)
 				//com argv[0] es a.out, al posar ++i ja comenca en argv[1],
 				//i va passant fins que aplegue a l'ultim argument
 				if (!a)
-					a = new_lst(ft_index(argc, argv, i), ft_atoi(argv[i]), i);
+					a = new_lst(/*ft_index(argc, argv, i),*/ ft_atoi(argv[i]), i);
 				else
 				{
-					nodo = new_lst(ft_index(argc, argv, i), ft_atoi(argv[i]), i);
+					nodo = new_lst(/*ft_index(argc, argv, i),*/ ft_atoi(argv[i]), i);
+					if (n == 0)
+						first = nodo;
+						//first es un puntero a nodo, que es una estructura
 					add_lst_back(&a, nodo);
-					mostra(a);
 				}
 				i++;
 				n++;
 			}
+		ft_index(&a);
+		mostra(a);
 		}
 	}
 /*

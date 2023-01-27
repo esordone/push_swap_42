@@ -42,14 +42,14 @@ typedef struct s_nodo
 	int		i;
 }			t_element;*/
 
-t_nodo	*new_lst(int index, int val, int pos);
+t_nodo	*new_lst(/*int index,*/ int val, int pos);
 int		max_int(int argc, char **argv, int i);
 int		not_int(int argc, char **argv, int i);
 int		valid_input(int argc, char **argv);
 int     ft_max(int argc, char **argv, int i);
-int     ft_index(int argc, char **argv, int i);
+int	    ft_index(t_nodo	**a);
 void	free_malloc(t_nodo **valor, int i);
-//int	    ft_min(int argc, char **argv, int i);
+int	    ft_min(t_nodo **a);
 t_nodo	*last_lst(t_nodo *lst);
 void    mostra(t_nodo *a);
 int		rep_number(int argc, char **argv, int i);

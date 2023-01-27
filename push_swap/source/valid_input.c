@@ -79,20 +79,22 @@ int	valid_input(int argc, char **argv)
 	{
 		if (not_int(argc, argv, i) == 0)
 		{
-			write (1, "Error\n", 6);
+			write (2, "Error\n", 6);
 			return (0);
 		}
 		if (rep_number(argc, argv, i) == 0)
 		{
-			write(1, "Error\n", 6);
+			write(2, "Error\n", 6);
 			return (0);
 		}
 		if (max_int(argc, argv, i) == 0)
 		{
-			write(1, "Error\n", 6);
+			write(2, "Error\n", 6);
 			return (0);
 		}
 		i++;
 	}
 	return (1);
 }
+
+//falta comprovar el + y el -
