@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-t_nodo	*new_lst(/*int index,*/ int val, int pos)
+t_nodo	*new_lst(int val, int pos)
 {
 	t_nodo	*n;
 
@@ -24,7 +24,6 @@ t_nodo	*new_lst(/*int index,*/ int val, int pos)
 	n->pos = pos;
 	n->index = -1;
 	n->next = NULL;
-	//n->len++;
 	return (n);
 }
 

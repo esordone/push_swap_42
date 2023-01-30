@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void mostra(t_nodo *a)
+void	mostra(t_nodo *a, t_nodo *b)
 {
 	while (a)
 	{
@@ -23,18 +23,39 @@ void mostra(t_nodo *a)
 		a = a->next;
 	}
 	if (a == NULL)
-		printf("\n\nHas aplegat al final de la llista\n\n");
+		printf("\n\nHas aplegat al final de la llista A\n\n");
+	while (b)
+	{
+		printf("\nelement: %d\n", b->val);
+		printf("ind = %i\n", b->index);
+        printf("pos = %i\n", b->pos);
+        printf("next = %p\n", b->next);
+		a = b->next;
+	}
+	if (b == NULL)
+		printf("\n\nHas aplegat al final de la llista B\n\n");
+}
+
+void	ft_clear_stack(t_nodo **stack)
+{
+	if (!stack || !(*stack))
+		return ;
+	ft_clear_stack(&(*stack)->next);
+	free(*stack);
+	*stack = NULL;
 }
 
 int main(int argc, char **argv)
 {
 	t_nodo		*a;
+	t_nodo		*b;
 	t_nodo		*first;
 	int			n;
 	int			i;
 	t_nodo		*nodo;
 
 	i = 1;
+	b = NULL;
 	if (argc < 2)
 		return (0);
 	else
@@ -62,41 +83,10 @@ int main(int argc, char **argv)
 				n++;
 			}
 		ft_index(&a);
-		mostra(a);
+		mostra(a, b);
 		}
 	}
-/*
-	printf("------------------------\n");
-    printf("first = %p\n", a.first);
-    printf("last = %p\n", a.last);
-    printf("size = %i\n", a.size);
-    printf("------------------------\na\n");
-    while (a.first)
-    {
-        printf("dir = %p\n", a.first);
-        printf("val = %i\n", a.first->val);
-        printf("ind = %i\n", a.first->index);
-        printf("pos = %i\n", a.first->pos);
-        printf("prev = %p\n", a.first->prev);
-        printf("next = %p\n\n", a.first->next);
-        a.first = a.first->next;
-    }
-    printf("------------------------\n");*/
-/*
-    printf("------------------------\nb\n");
-    printf("first = %p\n", b.first);
-    printf("last = %p\n", b.last);
-    printf("size = %i\n", b.size);
-    printf("------------------------\n");
-    while (b.first)
-    {
-        printf("dir = %p\n", b.first);
-        printf("val = %i\n", b.first->val);
-        printf("ind = %i\n", b.first->index);
-        printf("pos = %i\n", b.first->pos);
-        printf("prev = %p\n", b.first->prev);
-        printf("next = %p\n\n", b.first->next);
-        b.first = b.first->next;
-    }*/
+	ft_clear_stack(&a);
+	ft_clear_stack(&b);
 	return (0);
 }

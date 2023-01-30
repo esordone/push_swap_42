@@ -14,7 +14,7 @@
 
 static t_nodo	*ft_min(t_nodo **a)
 {
-	int min;
+	int		min;
 	t_nodo	*tmp;
 	t_nodo	*lst_min;
 

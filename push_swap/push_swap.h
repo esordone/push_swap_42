@@ -36,20 +36,21 @@ typedef struct s_nodo
 }			t_element;*/
 
 //valid input
-int		        max_int(int argc, char **argv, int i);
-int		        not_int(int argc, char **argv, int i);
-int		        valid_input(int argc, char **argv);
-int		        rep_number(int argc, char **argv, int i);
+int	rep_number(int argc, char **argv, int i);
+int	max_int(int argc, char **argv, int i);
+int	not_int(int argc, char **argv, int i);
+int	valid_input(int argc, char **argv);
 
 //info
-void	        ft_index(t_nodo **a);
-void            mostra(t_nodo *a);
+void	ft_index(t_nodo **a);
+void	mostra(t_nodo *a, t_nodo *b);
 
 //lists
-t_nodo	        *new_lst(/*int index,*/ int val, int pos);
-void	        free_malloc(t_nodo **valor, int i);
-t_nodo	        *last_lst(t_nodo *lst);
-void	        add_lst_back(t_nodo **lst, t_nodo *new);
-int		        ft_len(char *s);
+t_nodo	*new_lst(int val, int pos);
+void    free_malloc(t_nodo **valor, int i);
+void	ft_clear_stack(t_nodo **stack);
+t_nodo  *last_lst(t_nodo *lst);
+void    add_lst_back(t_nodo **lst, t_nodo *new);
+int	ft_len(char *s);
 
 #endif

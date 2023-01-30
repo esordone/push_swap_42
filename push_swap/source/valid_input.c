@@ -96,5 +96,3 @@ int	valid_input(int argc, char **argv)
 	}
 	return (1);
 }
-
-//falta comprovar el + y el -
