@@ -27,13 +27,6 @@ typedef struct s_nodo
 	int				pos;
 }					t_nodo;
 
-/*typedef struct s_stack
-{
-	struct s_nodo	*first;
-	struct s_nodo	*last;
-	int				len;
-}					t_stack;
-*/
 /*typedef struct s_experiment
 {
 	int 	*argc;
@@ -42,18 +35,21 @@ typedef struct s_nodo
 	int		i;
 }			t_element;*/
 
-t_nodo	*new_lst(/*int index,*/ int val, int pos);
-int		max_int(int argc, char **argv, int i);
-int		not_int(int argc, char **argv, int i);
-int		valid_input(int argc, char **argv);
-int     ft_max(int argc, char **argv, int i);
-int	    ft_index(t_nodo	**a);
-void	free_malloc(t_nodo **valor, int i);
-int	    ft_min(t_nodo **a);
-t_nodo	*last_lst(t_nodo *lst);
-void    mostra(t_nodo *a);
-int		rep_number(int argc, char **argv, int i);
-void	add_lst_back(t_nodo **lst, t_nodo *new);
-int		ft_len(char *s);
+//valid input
+int		        max_int(int argc, char **argv, int i);
+int		        not_int(int argc, char **argv, int i);
+int		        valid_input(int argc, char **argv);
+int		        rep_number(int argc, char **argv, int i);
+
+//info
+void	        ft_index(t_nodo **a);
+void            mostra(t_nodo *a);
+
+//lists
+t_nodo	        *new_lst(/*int index,*/ int val, int pos);
+void	        free_malloc(t_nodo **valor, int i);
+t_nodo	        *last_lst(t_nodo *lst);
+void	        add_lst_back(t_nodo **lst, t_nodo *new);
+int		        ft_len(char *s);
 
 #endif

@@ -22,6 +22,7 @@ t_nodo	*new_lst(/*int index,*/ int val, int pos)
 	n->index = 0;
 	n->val = val;
 	n->pos = pos;
+	n->index = -1;
 	n->next = NULL;
 	//n->len++;
 	return (n);

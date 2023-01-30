@@ -35,8 +35,6 @@ int main(int argc, char **argv)
 	t_nodo		*nodo;
 
 	i = 1;
-	//a = inicialize_stack_a(argc, argv);
-	//printf("aquest es l'index %d\n", ft_index(argc, argv, i));
 	if (argc < 2)
 		return (0);
 	else
@@ -51,10 +49,10 @@ int main(int argc, char **argv)
 				//com argv[0] es a.out, al posar ++i ja comenca en argv[1],
 				//i va passant fins que aplegue a l'ultim argument
 				if (!a)
-					a = new_lst(/*ft_index(argc, argv, i),*/ ft_atoi(argv[i]), i);
+					a = new_lst(ft_atoi(argv[i]), i);
 				else
 				{
-					nodo = new_lst(/*ft_index(argc, argv, i),*/ ft_atoi(argv[i]), i);
+					nodo = new_lst(ft_atoi(argv[i]), i);
 					if (n == 0)
 						first = nodo;
 						//first es un puntero a nodo, que es una estructura
