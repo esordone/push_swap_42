@@ -41,3 +41,10 @@ void	sb(t_nodo **stack)
 	ft_swap(stack);
 	write (1, "sb\n", 3);
 }
+
+void	ss(t_nodo **stack_a, t_nodo **stack_b)
+{
+	ft_swap(stack_a);
+	ft_swap(stack_b);
+	write (1, "ss\n", 3);
+}

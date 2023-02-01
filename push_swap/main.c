@@ -83,6 +83,7 @@ int main(int argc, char **argv)
 				n++;
 			}
 		ft_index(&a);
+		pb(&a, &b);
 		mostra(a, b);
 		}
 	}

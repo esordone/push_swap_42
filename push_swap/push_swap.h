@@ -51,11 +51,16 @@ void    free_malloc(t_nodo **valor, int i);
 void	ft_clear_stack(t_nodo **stack);
 t_nodo  *last_lst(t_nodo *lst);
 void    add_lst_back(t_nodo **lst, t_nodo *new);
-int	ft_len(char *s);
+void	ft_add_lst_front(t_nodo **lst, t_nodo *new);
+int	    ft_len(char *s);
 
 //operations
 void	sa(t_nodo **stack);
 void	sb(t_nodo **stack);
+void    ss(t_nodo **stack_a, t_nodo **stack_b);
+void	pb(t_nodo **stack_a, t_nodo **stack_b);
+void	pa(t_nodo **stack_a, t_nodo **stack_b);
 void	ft_swap(t_nodo **stack);
+void	ft_push_b(t_nodo **stack_a, t_nodo **stack_b);
 
 #endif

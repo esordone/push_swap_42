@@ -25,9 +25,10 @@ WHITE = \033[0;97m
 NAME = push_swap
 
 SRC = main.c \
-	  source/add_lst_back.c \
-	  source/new_lst.c \
-	  source/last_lst.c \
+	  source/lists/add_lst_back.c \
+	  source/lists/new_lst.c \
+	  source/lists/last_lst.c \
+	  source/lists/ft_add_lst_front.c \
 	  source/valid_input.c \
 	  source/index.c \
 	  source/operations/swap.c
