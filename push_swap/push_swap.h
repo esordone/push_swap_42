@@ -53,4 +53,9 @@ t_nodo  *last_lst(t_nodo *lst);
 void    add_lst_back(t_nodo **lst, t_nodo *new);
 int	ft_len(char *s);
 
+//operations
+void	sa(t_nodo **stack);
+void	sb(t_nodo **stack);
+void	ft_swap(t_nodo **stack);
+
 #endif

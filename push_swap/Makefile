@@ -29,7 +29,8 @@ SRC = main.c \
 	  source/new_lst.c \
 	  source/last_lst.c \
 	  source/valid_input.c \
-	  source/index.c
+	  source/index.c \
+	  source/operations/swap.c
 
 INCLUDE = push_swap.h
 
