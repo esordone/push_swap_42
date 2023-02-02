@@ -22,6 +22,7 @@
 typedef struct s_nodo
 {
 	struct s_nodo	*next;
+    struct s_nodo   *prev;
 	int				index;
 	int				val;
 	int				pos;
@@ -61,6 +62,6 @@ void    ss(t_nodo **stack_a, t_nodo **stack_b);
 void	pb(t_nodo **stack_a, t_nodo **stack_b);
 void	pa(t_nodo **stack_a, t_nodo **stack_b);
 void	ft_swap(t_nodo **stack);
-void	ft_push_b(t_nodo **stack_a, t_nodo **stack_b);
+void	ft_push(t_nodo **stack_a, t_nodo **stack_b);
 
 #endif

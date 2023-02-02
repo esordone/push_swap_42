@@ -31,7 +31,8 @@ SRC = main.c \
 	  source/lists/ft_add_lst_front.c \
 	  source/valid_input.c \
 	  source/index.c \
-	  source/operations/swap.c
+	  source/operations/swap.c \
+	  source/operations/push.c
 
 INCLUDE = push_swap.h
 
