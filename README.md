@@ -14,6 +14,7 @@ RECURSOS CONSULTADOS:
   🎥 VÍDEOS
 1. https://www.youtube.com/watch?v=WxoGvBzWuGs
 2. https://www.youtube.com/watch?v=7KW59UO55TQ
+3. https://www.youtube.com/watch?v=ABZIs-lMSlA
 
   📒 PÁGINAS WEB 
 1. https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e
