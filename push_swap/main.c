@@ -34,19 +34,10 @@ void	mostra(t_nodo *a, t_nodo *b)
 		printf("adreca = %p\n", b);
 		printf("prev = %p\n", b->prev);
         printf("next = %p\n", b->next);
-		a = b->next;
+		b = b->next;
 	}
 	if (b == NULL)
 		printf("\n\nHas aplegat al final de la llista B\n\n");
-}
-
-void	ft_clear_stack(t_nodo **stack)
-{
-	if (!stack || !(*stack))
-		return ;
-	ft_clear_stack(&(*stack)->next);
-	free(*stack);
-	*stack = NULL;
 }
 
 int main(int argc, char **argv)
@@ -86,12 +77,14 @@ int main(int argc, char **argv)
 				i++;
 				n++;
 			}
+
+
 		ft_index(&a);
 		ft_push(&a, &b);
-		//mostra(a, b);
+		mostra(a, b);
 		}
 	}
-	ft_clear_stack(&a);
-	ft_clear_stack(&b);
+	ft_clear_lst(&a);
+	ft_clear_lst(&b);
 	return (0);
 }

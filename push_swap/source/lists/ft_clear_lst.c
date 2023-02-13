@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_add_lst_front.c                                 :+:      :+:    :+:   */
+/*   ft_clear_lst.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 13:26:25 by esordone          #+#    #+#             */
-/*   Updated: 2023/02/01 13:27:11 by esordone         ###   ########.fr       */
+/*   Created: 2023/02/13 16:48:42 by esordone          #+#    #+#             */
+/*   Updated: 2023/02/13 16:50:00 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	ft_add_lst_front(t_nodo **lst, t_nodo *new)
+void	ft_clear_lst(t_nodo **lst)
 {
-	if (!lst || !new)
-		return ;
-	if (!*lst)
+	t_nodo	*aux;
+
+	aux = *lst;
+	while (aux != NULL)
 	{
-		*lst = new;
-		(*lst)->prev = NULL;
-		(*lst)->next = NULL;
+		printf("m**********************\n");
+		aux = aux->next;
+		free(*lst);
+		*lst = aux;
 	}
-	new->next = (*lst);
-	(*lst)->prev = new;
-	*lst = new;
-	new->prev = NULL;
+	aux = NULL;
 }

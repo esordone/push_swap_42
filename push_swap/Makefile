@@ -29,6 +29,7 @@ SRC = main.c \
 	  source/lists/new_lst.c \
 	  source/lists/last_lst.c \
 	  source/lists/ft_add_lst_front.c \
+	  source/lists/ft_clear_lst.c \
 	  source/valid_input.c \
 	  source/index.c \
 	  source/operations/swap.c \
@@ -42,7 +43,7 @@ LIBFT = libft
 
 CC = gcc
 
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra #-fsanitize=address
 
 CLEAN = rm -rf
 

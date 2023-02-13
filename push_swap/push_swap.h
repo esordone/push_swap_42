@@ -48,11 +48,12 @@ void	mostra(t_nodo *a, t_nodo *b);
 
 //lists
 t_nodo	*new_lst(int val, int pos);
-void    free_malloc(t_nodo **valor, int i);
+//void    free_malloc(t_nodo **valor, int i);
 void	ft_clear_stack(t_nodo **stack);
 t_nodo  *last_lst(t_nodo *lst);
 void    add_lst_back(t_nodo **lst, t_nodo *new);
 void	ft_add_lst_front(t_nodo **lst, t_nodo *new);
+void    ft_clear_lst(t_nodo **lst);
 int	    ft_len(char *s);
 
 //operations

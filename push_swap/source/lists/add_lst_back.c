@@ -24,7 +24,6 @@ void	add_lst_back(t_nodo **lst, t_nodo *new)
 		(*lst)->next = NULL;
 		return ;
 	}
-	//if (new)
 	aux = last_lst(*lst);
 	aux->next = new;
 	new->prev = aux;

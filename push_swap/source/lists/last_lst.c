@@ -16,7 +16,7 @@ t_nodo	*last_lst(t_nodo *lst)
 {
 	if (!lst)
 		return (NULL);
-	while (lst->next != NULL)
+	while (lst->next)
 	{
 		lst = lst->next;
 	}

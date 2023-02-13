@@ -12,7 +12,7 @@
 
 #include "../../push_swap.h"
 
-static void	caguentotcollons(t_nodo **stack_a, t_nodo **stack_b)
+/*static void	caguentotcollons(t_nodo **stack_a, t_nodo **stack_b)
 {
 	t_nodo	*a;
 	t_nodo	*b;
@@ -38,30 +38,33 @@ static void	caguentotcollons(t_nodo **stack_a, t_nodo **stack_b)
         printf("pos = %i\n", b->pos);
 		printf("adreca = %p\n", b);
         printf("next = %p\n", b->next);
-		printf("prev = %p\n", a->prev);
+		//printf("prev = %p\n", a->prev);
 		b = b->next;
 	}
 	if (b == NULL)
 		printf("\n\nHas aplegat al final de la llista B\n\n");
-}
+}*/
 
 void	ft_push(t_nodo **stack_a, t_nodo **stack_b)
 {
 	t_nodo	*tmp;
-	t_nodo	*first_b;
 
-	tmp = NULL;
-	first_b = *stack_b;
+	//tmp = NULL;
 	if (!stack_a)
 		return ;
 	tmp = (*stack_a);
-	printf("\nhola\n");
-	ft_add_lst_front(stack_a, first_b);
-	first_b = tmp;
-	if (first_b)
-		first_b->prev = NULL;
-	printf("\nperola\n");
-	caguentotcollons(stack_a, stack_b);
+	*stack_a = tmp->next;
+	ft_add_lst_front(stack_b, tmp);
+	//tmp->next = *stack_b;
+	*stack_b = tmp;
+	tmp->next = NULL;
+	//(*stack_b)->prev = tmp->next;
+	//caguentotcollons(stack_a, stack_b);
+	/*ft_add_lst_front(stack_a, *stack_b);
+	*stack_b = tmp;
+	if (stack_b)
+		(*stack_b)->prev = NULL;*/
+	//caguentotcollons(stack_a, stack_b);
 }
 
 void	pb(t_nodo **stack_a, t_nodo **stack_b)
