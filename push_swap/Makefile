@@ -73,6 +73,6 @@ fclean: clean
 	@echo "$(CYAN)Executables files cleaned!$(DEF_COLOR)"
 
 re: fclean all
-	@echo "$(GREEN)Everything have been remake!$(DEF_COLOR)"
+	@echo "$(GREEN)Everything has been remade!$(DEF_COLOR)"
 
 .PHONY: all makelibft clean fclean re

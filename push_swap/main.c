@@ -6,7 +6,7 @@
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:37:13 by esordone          #+#    #+#             */
-/*   Updated: 2023/01/19 11:41:41 by esordone         ###   ########.fr       */
+/*   Updated: 2023/02/13 12:45:09 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	mostra(t_nodo *a, t_nodo *b)
 		printf("\nelement: %d\n", a->val);
 		printf("ind = %i\n", a->index);
         printf("pos = %i\n", a->pos);
+		printf("adreca = %p\n", a);
+		printf("prev = %p\n", a->prev);
         printf("next = %p\n", a->next);
 		a = a->next;
 	}
@@ -29,6 +31,8 @@ void	mostra(t_nodo *a, t_nodo *b)
 		printf("\nelement: %d\n", b->val);
 		printf("ind = %i\n", b->index);
         printf("pos = %i\n", b->pos);
+		printf("adreca = %p\n", b);
+		printf("prev = %p\n", b->prev);
         printf("next = %p\n", b->next);
 		a = b->next;
 	}
@@ -83,8 +87,8 @@ int main(int argc, char **argv)
 				n++;
 			}
 		ft_index(&a);
-		pb(&a, &b);
-		mostra(a, b);
+		ft_push(&a, &b);
+		//mostra(a, b);
 		}
 	}
 	ft_clear_stack(&a);

@@ -20,11 +20,12 @@ void	add_lst_back(t_nodo **lst, t_nodo *new)
 	if (!*lst)
 	{
 		*lst = new;
+		(*lst)->prev = NULL;
+		(*lst)->next = NULL;
 		return ;
 	}
-	if (new)
-	{
-		aux = last_lst(*lst);
-		aux->next = new;
-	}
+	//if (new)
+	aux = last_lst(*lst);
+	aux->next = new;
+	new->prev = aux;
 }

@@ -14,20 +14,14 @@
 
 void	ft_add_lst_front(t_nodo **lst, t_nodo *new)
 {
-	if (!lst || !new)
-		return ;
 	if (!*lst)
 	{
 		*lst = new;
 		(*lst)->prev = NULL;
 		(*lst)->next = NULL;
-		//return ;
 	}
-	else
-	{
-		new->next = *lst;
-		(*lst)->prev = new;
-		*lst = new;
-		new->prev = NULL;
-	}
+	new->next = *lst;
+	(*lst)->prev = new;
+	*lst = new;
+	new->prev = NULL;
 }

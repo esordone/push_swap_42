@@ -43,7 +43,7 @@ int	max_int(int argc, char **argv, int i)
 	while (i < argc)
 	{
 		n = ft_atoi(argv[i]);
-		if (n > INT_MAX || n < INT_MIN)
+		if (n >= INT_MAX || n <= INT_MIN)
 			return (0);
 		if (ft_strncmp(argv[i], ft_itoa(n), ft_strlen(argv[i])) != 0)
 			return (0);
