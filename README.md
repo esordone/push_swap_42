@@ -21,6 +21,7 @@ RECURSOS CONSULTADOS:
 2. https://www.monografias.com/trabajos90/listas-c/listas-c
 3. http://platea.pntic.mec.es/vgonzale/cyr_0204/cyr_01/control/lengua_C/estructuras.htm
 4. https://conclase.net/c/edd/cap5
+5. https://conclase.net/c/edd/cap1
 
   💻 REPOSITORIOS
 1. https://github.com/gemartin99/Push_swap
