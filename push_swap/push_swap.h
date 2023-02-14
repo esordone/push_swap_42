@@ -44,6 +44,7 @@ int	valid_input(int argc, char **argv);
 
 //info
 void	ft_index(t_nodo **a);
+int     is_sorted(t_nodo *a);
 void	mostra(t_nodo *a, t_nodo *b);
 
 //lists
@@ -54,6 +55,10 @@ void    add_lst_back(t_nodo **lst, t_nodo *new);
 void	ft_add_lst_front(t_nodo **lst, t_nodo *new);
 void    ft_clear_lst(t_nodo **lst);
 int	    ft_len(char *s);
+
+//algorithm
+void	sort_three(t_nodo **stack);
+void	sort_four(t_nodo **stack_a, t_nodo **stack_b);
 
 //operations
 void	sa(t_nodo **stack);

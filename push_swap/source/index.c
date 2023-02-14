@@ -48,3 +48,14 @@ void	ft_index(t_nodo **a)
 		lst = ft_min(a);
 	}
 }
+
+int	is_sorted(t_nodo *a)
+{
+	while (a->next)
+	{
+		if (a->val > a->next->val)
+			return (0);
+		a = a->next;
+	}
+	return (1);
+}

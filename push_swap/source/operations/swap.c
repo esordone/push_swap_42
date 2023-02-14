@@ -21,7 +21,6 @@ void	ft_swap(t_nodo **stack)
 	res = *stack;
 	if (res->next == NULL || !stack)
 		return ;
-	//Faig un swap classic aplicant les llistes (a,b,aux)
 	aux = res->next->val;
 	new_index = res->next->index;
 	res->next->val = res->val;
