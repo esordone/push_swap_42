@@ -17,9 +17,8 @@ void	ft_clear_lst(t_nodo **lst)
 	t_nodo	*aux;
 
 	aux = *lst;
-	while (aux != NULL)
+	while (aux != NULL && aux)
 	{
-		printf("m**********************\n");
 		aux = aux->next;
 		free(*lst);
 		*lst = aux;

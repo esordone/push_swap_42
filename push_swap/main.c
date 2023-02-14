@@ -77,10 +77,8 @@ int main(int argc, char **argv)
 				i++;
 				n++;
 			}
-
-
 		ft_index(&a);
-		ft_push(&a, &b);
+		rb(&b);
 		mostra(a, b);
 		}
 	}

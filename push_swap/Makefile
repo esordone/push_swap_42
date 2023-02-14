@@ -33,7 +33,8 @@ SRC = main.c \
 	  source/valid_input.c \
 	  source/index.c \
 	  source/operations/swap.c \
-	  source/operations/push.c
+	  source/operations/push.c \
+	  source/operations/rotate.c
 
 INCLUDE = push_swap.h
 
