@@ -24,6 +24,7 @@ RECURSOS CONSULTADOS:
 5. https://conclase.net/c/edd/cap1
 
   💻 REPOSITORIOS
-1. https://github.com/gemartin99/Push_swap
-2. https://gist.github.com/Alejandrocaro35/28bbec98f352db5df240ec146d59778d
-3. https://codeberg.org/Vusk/push_swap/src/branch/main
+1. https://gist.github.com/Alejandrocaro35/28bbec98f352db5df240ec146d59778d
+2. https://codeberg.org/Vusk/push_swap/src/branch/main
+3. https://github.com/ElPatatin/42-Cursus_Public/tree/master/Push_swap
+4. https://github.com/gemartin99/Push-Swap-Tester
