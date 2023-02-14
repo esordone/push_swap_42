@@ -64,8 +64,12 @@ void	pa(t_nodo **stack_a, t_nodo **stack_b);
 void	rb(t_nodo **stack_b);
 void	ra(t_nodo **stack_a);
 void	rr(t_nodo **stack_a, t_nodo **stack_b);
+void	rrb(t_nodo **stack_b);
+void	rra(t_nodo **stack_a);
+void	rrr(t_nodo **stack_a, t_nodo **stack_b);
 void	ft_swap(t_nodo **stack);
 void	ft_push(t_nodo **stack_a, t_nodo **stack_b);
 void	ft_rotate(t_nodo **stack);
+void	ft_reverse_rotate(t_nodo **stack);
 
 #endif

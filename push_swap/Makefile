@@ -34,7 +34,8 @@ SRC = main.c \
 	  source/index.c \
 	  source/operations/swap.c \
 	  source/operations/push.c \
-	  source/operations/rotate.c
+	  source/operations/rotate.c \
+	  source/operations/reverse_rotate.c
 
 INCLUDE = push_swap.h
 
