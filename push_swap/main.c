@@ -37,7 +37,8 @@ void	mostra(t_nodo *a, t_nodo *b)
 		b = b->next;
 	}
 	if (b == NULL)
-		printf("\n\nHas aplegat al final de la llista B\n\n");
+		printf("\n\nHas aplegat al final de nodo\n\n");
+		//printf("\n\nHas aplegat al final de la llista B\n\n");
 }
 
 int main(int argc, char **argv)
@@ -71,16 +72,17 @@ int main(int argc, char **argv)
 					nodo = new_lst(ft_atoi(argv[i]), i);
 					if (n == 0)
 						first = nodo;
-						//first es un puntero a nodo, que es una estructura
+					//mostra(a, nodo);
 					add_lst_back(&a, nodo);
 				}
 				i++;
 				n++;
+				//nodo = NULL;
+				mostra(a, nodo);
 			}
 		ft_index(&a);
-		//sort_four(&a, &b);
-		sort_three(&a);
-		mostra(a, b);
+		sort_four(&a, &b);
+		//mostra(a, b);
 		}
 	}
 	ft_clear_lst(&a);

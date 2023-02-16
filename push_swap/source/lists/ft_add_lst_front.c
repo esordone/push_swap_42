@@ -21,6 +21,7 @@ void	ft_add_lst_front(t_nodo **lst, t_nodo *new)
 		*lst = new;
 		(*lst)->prev = NULL;
 		(*lst)->next = NULL;
+		return ;
 	}
 	new->next = (*lst);
 	(*lst)->prev = new;

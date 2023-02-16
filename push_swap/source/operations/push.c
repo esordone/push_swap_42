@@ -15,18 +15,35 @@
 void	ft_push(t_nodo **stack_a, t_nodo **stack_b)
 {
 	t_nodo	*tmp;
-	int		new_index;
+	t_nodo	*aux;
 
-	if (!stack_a)
+	if (!stack_a ||!*stack_a)
 		return ;
 	tmp = (*stack_a);
-	new_index = (*stack_a)->index;
 	*stack_a = tmp->next;
 	ft_add_lst_front(stack_b, tmp);
 	*stack_b = tmp;
-	tmp->index = new_index;
+	aux = last_lst(*stack_b);
+	if (!aux)
+		return ;
 	(*stack_b)->prev = NULL;
-	tmp->next = NULL;
+	aux->next = NULL;
+}
+
+void	ft_push_a(t_nodo **stack_b, t_nodo **stack_a)
+{
+	t_nodo	*tmp;
+	int		new_index;
+
+	if (!stack_b)
+		return ;
+	tmp = (*stack_b);
+	new_index = (*stack_b)->index;
+	*stack_b = tmp->next;
+	ft_add_lst_front(stack_a, tmp);
+	*stack_a = tmp;
+	tmp->index = new_index;
+	(*stack_a)->prev = NULL;
 }
 
 void	pb(t_nodo **stack_a, t_nodo **stack_b)
@@ -35,8 +52,8 @@ void	pb(t_nodo **stack_a, t_nodo **stack_b)
 	write (1, "pb\n", 3);
 }
 
-void	pa(t_nodo **stack_a, t_nodo **stack_b)
+void	pa(t_nodo **stack_b, t_nodo **stack_a)
 {
-	ft_push(stack_b, stack_a);
+	ft_push_a(stack_b, stack_a);
 	write (1, "pa\n", 3);
 }
