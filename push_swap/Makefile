@@ -38,7 +38,8 @@ SRC = main.c \
 	  source/operations/reverse_rotate.c \
 	  source/sort/small_sort.c \
 	  source/sort/utils/ft_sort.c \
-	  source/sort/utils/ft_divide.c
+	  source/sort/utils/ft_divide.c \
+	  source/sort/utils/min_first.c
 
 INCLUDE = push_swap.h
 

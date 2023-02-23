@@ -1,43 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_divide.c                                        :+:      :+:    :+:   */
+/*   min_first.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esordone <esordone@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/22 17:04:49 by esordone          #+#    #+#             */
-/*   Updated: 2023/02/22 17:05:19 by esordone         ###   ########.fr       */
+/*   Created: 2023/02/23 16:20:16 by esordone          #+#    #+#             */
+/*   Updated: 2023/02/23 16:21:29 by esordone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../push_swap.h"
 
-int	ft_index_max(t_nodo **stack)
+static int	ft_index_min(t_nodo **stack)
 {
-	int		index_max;
+	int		index_min;
 	t_nodo	*lst;
 
 	lst = *stack;
-	index_max = lst->index;
+	index_min = lst->index;
 	if (!(*stack))
 		return (0);
 	while (lst)
 	{
-		if (lst->index > index_max)
-			index_max = lst->index;
+		if (lst->index < index_min)
+			index_min = lst->index;
 		lst = lst->next;
 	}
-	return (index_max);
+	return (index_min);
 }
 
-int ft_divide(t_nodo	**stack)
+void	ft_min_first(t_nodo **stack)
 {
 	t_nodo	*first;
-	int		res;
+	int		i;
 
+	i = 0;
 	first = (*stack);
-	res = ft_index_max(stack) / 2;
-	if (ft_index_max(stack) % 2 != 0)
-		res = res + 1;
-	return (res);
+	while (first->index != ft_index_min(stack))
+	{
+		ra(stack);
+		i++;
+	}
+	//printf("el valor de i aci es %i\n", i);
 }

@@ -28,14 +28,6 @@ typedef struct s_nodo
 	int				pos;
 }					t_nodo;
 
-/*typedef struct s_experiment
-{
-	int 	*argc;
-	char 	**argv;
-
-	int		i;
-}			t_element;*/
-
 //valid input
 int	rep_number(int argc, char **argv, int i);
 int	max_int(int argc, char **argv, int i);
@@ -65,6 +57,7 @@ int	    ft_index_max(t_nodo **stack);
 int     ft_divide(t_nodo	**stack);
 int     ft_len_lst(t_nodo *stack);
 int 	min(t_nodo **stack);
+void    ft_min_first(t_nodo **stack);
 
 //operations
 void	sa(t_nodo **stack);

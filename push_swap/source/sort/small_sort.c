@@ -63,23 +63,23 @@ void	sort_three(t_nodo **stack)
 void	sort_five(t_nodo **stack_a, t_nodo **stack_b)
 {
 	t_nodo	*first;
-	int	min_num;
 
 	first = (*stack_a);
-	min_num = min(stack_a);
 	if (is_sorted(first) == 1)
 	{
 		return;
 	}
-	while (first != NULL)
+	/*if (first->index == 0)
+		pb (stack_a, stack_b);*/
+	while (first)
 	{
-		if (first->val == min_num)
-		{
-			if (first->index == 0)
-				pb(stack_a, stack_b);
-			if (first->index == 1)
-				sa(stack_a);
-		}
+		ft_min_first(stack_a);
+		pb(stack_a, stack_b);
+		first = first->next;
+		//printf("la i val aci %i\n", i);
 	}
 	mira(stack_a, stack_b);
 }
+
+//estas fent la funcio min first de utils per posar els dos mes menuts
+//en el stack b per ordenar 5 numeros

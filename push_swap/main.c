@@ -80,6 +80,7 @@ int main(int argc, char **argv)
 				//mostra(a, nodo);
 			}
 		ft_index(&a);
+		//ft_min_first(&a);
 		//ft_divide(&a);
 		sort_five(&a, &b);
 		//sort_three(&a);
