@@ -44,6 +44,7 @@ int	valid_input(int argc, char **argv);
 
 //info
 void	ft_index(t_nodo **a);
+t_nodo	*ft_min(t_nodo **a);
 int     is_sorted(t_nodo *a);
 void	mostra(t_nodo *a, t_nodo *b);
 
@@ -58,7 +59,12 @@ int	    ft_len(char *s);
 
 //algorithm
 void	sort_three(t_nodo **stack);
-void	sort_four(t_nodo **stack_a, t_nodo **stack_b);
+void	sort_five(t_nodo **stack_a, t_nodo **stack_b);
+int 	ft_max(t_nodo **stack);
+int	    ft_index_max(t_nodo **stack);
+int     ft_divide(t_nodo	**stack);
+int     ft_len_lst(t_nodo *stack);
+int 	min(t_nodo **stack);
 
 //operations
 void	sa(t_nodo **stack);

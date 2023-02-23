@@ -52,41 +52,34 @@ void	sort_three(t_nodo **stack)
 	first = (*stack);
 	if (is_sorted(first) == 1)
 		return ;
-	if (first->index == 0)
-	{
+	if (first->index > first->next->index && first->index == ft_index_max(stack))
+		ra(stack);
+	else if (first->next->index > first->index)
 		rra(stack);
+	if (first->next->index < first->index)
 		sa(stack);
-	}
-	if (first->index == 1 && first->next->index == 0)
-		sa(stack);
-	if (first->index == 1 && first->next->index == 2)
-		rra(stack);
-	if (first->index == 2)
-	{
-		if (first->next->index == 0)
-			ra(stack);
-		else
-		{
-			sa(stack);
-			rra(stack);
-		}
-	}
 }
 
-void	sort_four(t_nodo **stack_a, t_nodo **stack_b)
+void	sort_five(t_nodo **stack_a, t_nodo **stack_b)
 {
-	t_nodo	*first_a;
+	t_nodo	*first;
+	int	min_num;
 
-	first_a = (*stack_a);
-	if (is_sorted(first_a) == 1)
-		return ;
-	pb(stack_a, stack_b);
+	first = (*stack_a);
+	min_num = min(stack_a);
+	if (is_sorted(first) == 1)
+	{
+		return;
+	}
+	while (first != NULL)
+	{
+		if (first->val == min_num)
+		{
+			if (first->index == 0)
+				pb(stack_a, stack_b);
+			if (first->index == 1)
+				sa(stack_a);
+		}
+	}
 	mira(stack_a, stack_b);
-	printf("***********************************************\n");
-	sort_three(stack_a);
-	mira(stack_a, stack_b);
-	printf("-----------------------------------------------\n");
-	pa(stack_b, stack_a);
-	mira(stack_a, stack_b);
-	printf("................................................\n");
 }

@@ -37,8 +37,8 @@ void	mostra(t_nodo *a, t_nodo *b)
 		b = b->next;
 	}
 	if (b == NULL)
-		printf("\n\nHas aplegat al final de nodo\n\n");
-		//printf("\n\nHas aplegat al final de la llista B\n\n");
+		//printf("\n\nHas aplegat al final de nodo\n\n");
+		printf("\n\nHas aplegat al final de la llista B\n\n");
 }
 
 int main(int argc, char **argv)
@@ -62,7 +62,6 @@ int main(int argc, char **argv)
 			// argc -1 perque el primer es a.out
 			while (n < (argc - 1))
 			{
-				//el 1 es l'index que encara no esta fet
 				//com argv[0] es a.out, al posar ++i ja comenca en argv[1],
 				//i va passant fins que aplegue a l'ultim argument
 				if (!a)
@@ -78,11 +77,13 @@ int main(int argc, char **argv)
 				i++;
 				n++;
 				//nodo = NULL;
-				mostra(a, nodo);
+				//mostra(a, nodo);
 			}
 		ft_index(&a);
-		sort_four(&a, &b);
-		//mostra(a, b);
+		//ft_divide(&a);
+		sort_five(&a, &b);
+		//sort_three(&a);
+		mostra(a, b);
 		}
 	}
 	ft_clear_lst(&a);

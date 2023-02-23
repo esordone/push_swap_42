@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-static t_nodo	*ft_min(t_nodo **a)
+t_nodo	*ft_min(t_nodo **a)
 {
 	int		min;
 	t_nodo	*tmp;
