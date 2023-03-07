@@ -52,7 +52,8 @@ void	sort_three(t_nodo **stack)
 	first = (*stack);
 	if (is_sorted(first) == 1)
 		return ;
-	if (first->index > first->next->index && first->index == ft_index_max(stack))
+	if (first->index > first->next->index
+		&& first->index == ft_index_max(stack))
 		ra(stack);
 	else if (first->next->index > first->index)
 		rra(stack);
@@ -63,23 +64,24 @@ void	sort_three(t_nodo **stack)
 void	sort_five(t_nodo **stack_a, t_nodo **stack_b)
 {
 	t_nodo	*first;
+	int		second_index;
 
 	first = (*stack_a);
+	second_index = ft_index_min(stack_a) + 1;
 	if (is_sorted(first) == 1)
-	{
-		return;
-	}
-	/*if (first->index == 0)
-		pb (stack_a, stack_b);*/
+		return ;
 	while (first)
 	{
 		ft_min_first(stack_a);
 		pb(stack_a, stack_b);
 		first = first->next;
-		//printf("la i val aci %i\n", i);
 	}
-	mira(stack_a, stack_b);
+	first = (*stack_a);
+	while (first->index != second_index)
+		ra(stack_a);
+	pb(stack_a, stack_b);
+	sort_three(stack_a);
+	pa(stack_b, stack_a);
+	pa(stack_b, stack_a);
+	//mira(stack_a, stack_b);
 }
-
-//estas fent la funcio min first de utils per posar els dos mes menuts
-//en el stack b per ordenar 5 numeros

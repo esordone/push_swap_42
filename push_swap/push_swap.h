@@ -58,6 +58,7 @@ int     ft_divide(t_nodo	**stack);
 int     ft_len_lst(t_nodo *stack);
 int 	min(t_nodo **stack);
 void    ft_min_first(t_nodo **stack);
+int	    ft_index_min(t_nodo **stack);
 
 //operations
 void	sa(t_nodo **stack);

@@ -12,7 +12,7 @@
 
 #include "../../../push_swap.h"
 
-static int	ft_index_min(t_nodo **stack)
+int	ft_index_min(t_nodo **stack)
 {
 	int		index_min;
 	t_nodo	*lst;
@@ -33,14 +33,8 @@ static int	ft_index_min(t_nodo **stack)
 void	ft_min_first(t_nodo **stack)
 {
 	t_nodo	*first;
-	int		i;
 
-	i = 0;
 	first = (*stack);
 	while (first->index != ft_index_min(stack))
-	{
 		ra(stack);
-		i++;
-	}
-	//printf("el valor de i aci es %i\n", i);
 }
