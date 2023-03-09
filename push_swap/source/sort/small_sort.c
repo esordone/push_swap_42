@@ -12,39 +12,6 @@
 
 #include "../../push_swap.h"
 
-void	mira(t_nodo **aa, t_nodo **bb)
-{
-	t_nodo	*a;
-	t_nodo	*b;
-
-	a = *aa;
-	b = *bb;
-	while (a)
-	{
-		printf("\nelement: %d\n", a->val);
-		printf("ind = %i\n", a->index);
-        printf("pos = %i\n", a->pos);
-		printf("adreca = %p\n", a);
-		printf("prev = %p\n", a->prev);
-        printf("next = %p\n", a->next);
-		a = a->next;
-	}
-	if (a == NULL)
-		printf("\n\nHas aplegat al final de la llista A\n\n");
-	while (b)
-	{
-		printf("\nelement: %d\n", b->val);
-		printf("ind = %i\n", b->index);
-        printf("pos = %i\n", b->pos);
-		printf("adreca_b = %p\n", b);
-		printf("prev = %p\n", b->prev);
-        printf("next = %p\n", b->next);
-		b = b->next;
-	}
-	if (b == NULL)
-		printf("\n\nHas aplegat al final de la llista B\n\n");
-}
-
 void	sort_three(t_nodo **stack)
 {
 	t_nodo	*first;
@@ -83,5 +50,4 @@ void	sort_five(t_nodo **stack_a, t_nodo **stack_b)
 	sort_three(stack_a);
 	pa(stack_b, stack_a);
 	pa(stack_b, stack_a);
-	//mira(stack_a, stack_b);
 }

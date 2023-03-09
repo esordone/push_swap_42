@@ -30,7 +30,7 @@ int	ft_index_max(t_nodo **stack)
 	return (index_max);
 }
 
-int ft_divide(t_nodo	**stack)
+int	ft_divide(t_nodo **stack)
 {
 	t_nodo	*first;
 	int		res;

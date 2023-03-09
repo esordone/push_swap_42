@@ -37,6 +37,8 @@ SRC = main.c \
 	  source/operations/rotate.c \
 	  source/operations/reverse_rotate.c \
 	  source/sort/small_sort.c \
+	  source/sort/big_sort.c \
+	  source/sort/sort_params.c \
 	  source/sort/utils/ft_sort.c \
 	  source/sort/utils/ft_divide.c \
 	  source/sort/utils/min_first.c
@@ -58,9 +60,9 @@ HEADER = libft.h
 #-------------------------------------RULES------------------------------------#
 %.o : %.c $(INCLUDE) Makefile
 	@$(CC) $(FLAGS) -c $< -o $@
-	@echo "$(YELLOW)compiling: $< $(DEF_COLOR)"
 
 all: makelibft $(NAME)
+	@echo "$(GREEN)*SUCCESSFULL COMPILATION!* $(DEF_COLOR)"
 
 makelibft :
 	@$(MAKE) -C $(LIBFT) bonus

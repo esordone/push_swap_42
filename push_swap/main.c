@@ -18,10 +18,10 @@ void	mostra(t_nodo *a, t_nodo *b)
 	{
 		printf("\nelement: %d\n", a->val);
 		printf("ind = %i\n", a->index);
-        printf("pos = %i\n", a->pos);
-		printf("adreca = %p\n", a);
-		printf("prev = %p\n", a->prev);
-        printf("next = %p\n", a->next);
+       // printf("pos = %i\n", a->pos);
+		//printf("adreca = %p\n", a);
+		//printf("prev = %p\n", a->prev);
+        //printf("next = %p\n", a->next);
 		a = a->next;
 	}
 	if (a == NULL)
@@ -30,10 +30,10 @@ void	mostra(t_nodo *a, t_nodo *b)
 	{
 		printf("\nelement: %d\n", b->val);
 		printf("ind = %i\n", b->index);
-        printf("pos = %i\n", b->pos);
-		printf("adreca = %p\n", b);
-		printf("prev = %p\n", b->prev);
-        printf("next = %p\n", b->next);
+        //printf("pos = %i\n", b->pos);
+		//printf("adreca = %p\n", b);
+		//printf("prev = %p\n", b->prev);
+        //printf("next = %p\n", b->next);
 		b = b->next;
 	}
 	if (b == NULL)
@@ -80,7 +80,9 @@ int main(int argc, char **argv)
 				//mostra(a, nodo);
 			}
 		ft_index(&a);
-		sort_five(&a, &b);
+		//sort_params(&a, &b);
+		big_sort(&a, &b, 2);
+		//sort_five(&a, &b);
 		mostra(a, b);
 		}
 	}

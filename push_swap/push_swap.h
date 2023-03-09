@@ -50,8 +50,10 @@ void    ft_clear_lst(t_nodo **lst);
 int	    ft_len(char *s);
 
 //algorithm
+void    sort_params(t_nodo **stack_a, t_nodo **stack_b);
 void	sort_three(t_nodo **stack);
 void	sort_five(t_nodo **stack_a, t_nodo **stack_b);
+void	big_sort(t_nodo **stack_a, t_nodo **stack_b, int chunks);
 int 	ft_max(t_nodo **stack);
 int	    ft_index_max(t_nodo **stack);
 int     ft_divide(t_nodo	**stack);
